@@ -145,6 +145,11 @@ Linked lists are closely tied with pointers and utilize their benefits. This is 
 
 A doubly linked list is an extension of the linked list that enhances its functionality by giving an additional pointer. In a singly linked list, each node contains a pointer to the next node, but in a doubly linked list, each node contains two pointers one pointing to the next node and another pointing to the previous node. This link allows for more flexible traverse of the list, as you can move both forwards and backwards through the list. Additionaly, I was able to implement a "delete" from back function that deletes nodes from the back being made possible by a tail pointer. 
 
+## Jaged Arrays
+During the term, I also learned about jagged arrays and how to handle them in C++. A jagged array is an array of arrays where the inner arrays can have different lengths. This structure is useful when dealing with data that naturally varies in size, such as rows of data with varying numbers of elements.
+
+I worked on adapting C code to C++ to manage jagged arrays using linked lists. This involved creating custom classes to represent rows and the overall array, allowing for dynamic memory allocation and efficient data management. By processing input data into a 2D array format, I gained practical experience in managing complex data structures, further enhancing my understanding of dynamic memory and data organization in C++.
+
 ## Multithreading
 
 ## Threads
