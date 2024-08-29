@@ -78,7 +78,7 @@ class Employee {
         Employee(double s) {
             salary = s;
         }
-        double getSalary() {
+        double getSalary() const {
             return salary;
         }
 };
