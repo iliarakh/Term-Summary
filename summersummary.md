@@ -6,11 +6,11 @@ On my first day I was asked to run a simple hello world world program using just
 
 I then installed Visual studio tools, CMake, Ninja, and conan. Visual studio gave me a better user interface to code for a cleaner work enviroment by giving me the tools to edit the visual appearance of my workspace, giving me easy access to github and giving me tools to read and go between my code, CMake is a cross-platform tool that helps manage the build process of software projects. It is primarily used to generate build files for different platforms and compilers, making it easier to compile and link code across various environments. For my situation CMake helped me link my classes to diffrent main programs and utilize the build system ninja which takes source code and outputs executables.
 
-After initializing my enviroment I was introduced to github, at the beggining I was using gitbash to upload my code and learned the proper commands to upload, push, pull and other nessarcy commands. GitHub is a very useful tool to work on projects with, as you can organize your code, share your code, and organize it in a manner such that your team can edit and show where to make changes and organize a project 
+After initializing my enviroment I was introduced to github, at the beginning I was using gitbash to upload my code and learned the proper commands to upload, push, pull and other nessarcy commands. GitHub is a very useful tool to work on projects with, as you can organize your code, share your code, and organize it in a manner such that your team can edit and show where to make changes and organize a project 
 
-## OOP(Object Orianted Programming)
+## OOP(Object Oriented Programming)
 
-One of the first concepts that I learned was Object Orianted Programming or OOP for short. This is a very important concept and the core of the projects that I have created during this semester.
+One of the first concepts that I learned was Object Oriented Programming or OOP for short. This is a very important concept and the core of the projects that I have created during this semester.
 
 In OOP, you are focused on creating an object and basing things around it. For example, if you have a car, a car is an object but it has certain specifications like year and make. In C++, you can define this by using a class and then you name your class. For example, `class car` and then inside this class, you can create member variables that are part of this class, for example, `make`, and `year`.
 ```cpp
@@ -26,7 +26,7 @@ car1.make = "BMW";
 car1.year = 2020;
 ```
 ## Access Specifiers
-In C++, when you create a class, you have something called access specifiers. These are basically telling C++ if you can access that certain type of information outside of that specified class. This is important to keep certain information secure.
+In C++, when you create a class, you have something called access specifiers. These are basically telling C++ if you can access that certain type of information outside of that specified class. This is important to keep certain information secure, access modifiers make software less error prone.
 ```cpp
 // Member Functions
 class Car {
@@ -62,8 +62,9 @@ class Car {
 
 ## Encapsulation
 In OOP, there is something called encapsulation. This is basically where you manipulate private and public access specifiers to have better control of your data. Let's say you run a company and you create a class called employee. You can set the salary to private and create specific public functions to get and display the salary. This better controls your data, because you (or others) can change one part of the code without affecting other parts.
-```cpp
+
 // Encapsulation
+```cpp
 class Employee {
     private:
         double salary;
@@ -80,7 +81,7 @@ class Employee {
 Employee emp1(50000);
 cout << emp1.getSalary() << endl;
 ## Inheritance
-In OOP, there is a concept called inheritance. Inheritance allows one class to inherit the variables and member functions from another class. Inheritance prevents code duplication. This leads to more maintainable software. C++ also allows multi-level inheritance. This means a derived class can be a base class. Furthermore you can add a concept called virtual classes they  are used in virtual inheritance in a way of preventing multiple “instances” of a given class appearing in an inheritance hierarchy when using multiple inheritances. 
+In OOP, there is a concept called inheritance. Inheritance allows one class to inherit the variables and member functions from another class. Inheritance prevents code duplication. This leads to more maintainable software. C++ also allows multi-level inheritance. This means a derived class can be a base class. Furthermore you can add a concept called virtual what this does is adds a pointer to the class that holds a refreence to the implementing class(child). Down below is the syntax to properly write a virtual class, which creates a parent class(gym).
 ```cpp
 // Inheritance
 class Vehicle {
@@ -148,7 +149,7 @@ A doubly linked list is an extension of the linked list that enhances its functi
 ## Jaged Arrays
 During the term, I also learned about jagged arrays and how to handle them in C++. A jagged array is an array of arrays where the inner arrays can have different lengths. This structure is useful when dealing with data that naturally varies in size, such as rows of data with varying numbers of elements.
 
-I worked on adapting C code to C++ to manage jagged arrays using linked lists. This involved creating custom classes to represent rows and the overall array, allowing for dynamic memory allocation and efficient data management. By processing input data into a 2D array format, I gained practical experience in managing complex data structures, further enhancing my understanding of dynamic memory and data organization in C++.
+I worked on changing C code to C++ to manage jagged arrays using linked lists. This involved creating custom classes to represent rows and the overall array, allowing for dynamic memory allocation. By processing input data into a 2D array format, I gained experience in managing data structures, enhancing my understanding of dynamic memory and data organization in C++.
 
 ## Multithreading
 
