@@ -189,11 +189,11 @@ int main() {
 ```
 In this example, even though makeAnimalSpeak takes a pointer to the base class Animal, it correctly calls the speak() method of the derived classes Dog and Cat, thanks to polymorphism. This ability to interchange derived classes seamlessly wherever a base class is expected makes your code more flexible, easier to maintain, and more adaptable to change.
 
-## Pointers:
+## Pointers
 
 Pointers are as simple as they sound: they are variables that point to a memory address. Pointers are extremely useful and powerful because they allow you to access a variable or function without actually calling it. You can access the value stored at the memory address a pointer is pointing to by a process called dereferencing. This allows you to access the actual value stored at the pointed-to memory address.
 
-## Linked Lists:
+## Linked Lists
 
 Linked lists are closely tied to pointers and utilize their benefits. This is evident in the structure of linked lists. A linked list is made up of nodes, where each node contains a value and a pointer to the next node in the list. The last node points to a null value, indicating the end of the list. From this, you might wonder what the difference is between this and an array. The difference is that linked lists are dynamic in size, meaning that if you want to add or remove a node, you simply change the order of the pointers and ensure that the last value points to null. This makes linked lists extremely useful for structuring your data. One thing to note is that you have to traverse the entire list to reach your desired node, which means moving through each node until you reach the spot you want.
 
