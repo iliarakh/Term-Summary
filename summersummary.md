@@ -76,10 +76,15 @@ class Employee {
             return salary;
         }
 };
+
+int main() {
+    Employee emp1(50000);
+    std::cout << emp1.getSalary() << std::endl;
+
+    return 0;
+}
 ```
 
-Employee emp1(50000);
-cout << emp1.getSalary() << endl;
 ## Inheritance
 In OOP, there is a concept called inheritance. Inheritance allows one class to inherit the variables and member functions from another class. Inheritance prevents code duplication. This leads to more maintainable software. C++ also allows multi-level inheritance. This means a derived class can be a base class. Furthermore you can add a concept called virtual what this does is adds a pointer to the class that holds a refreence to the implementing class(child). Down below is the syntax to properly write a virtual class, which creates a parent class(gym).
 ```cpp
@@ -95,10 +100,14 @@ class Car : public Vehicle {
         int doors;
 };
 
+int main(){
+
 Car car1;
 car1.make = "BMW";
 car1.year = 2020;
 car1.doors = 4;
+}
+
 // Virtual Classes
 #ifndef __INHERITANCE__GYM__HPP__
 #define __INHERITANCE__GYM__HPP__
@@ -131,8 +140,11 @@ class Car : public Vehicle {
         }
 };
 
+int main(){
+
 Vehicle* vehicle1 = new Car();
 vehicle1->honk();
+}
 ```
 ## Pointers:
 
