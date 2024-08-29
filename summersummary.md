@@ -276,7 +276,9 @@ namespace MyNetwork {
 }  // namespace MyNetwork
 
 #endif
+```
 
+```cpp
 #include <Windows.h>
 #include <client.hpp>
 #include <iostream>
@@ -408,7 +410,9 @@ private:
 };
 }
 #endif // NETWORKSERVER_HPP
+```
 
+```cpp
 #include "server.hpp"
 #include <Windows.h>
 #include <iostream>
