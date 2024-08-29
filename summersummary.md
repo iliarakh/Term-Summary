@@ -21,9 +21,15 @@ class Car {
         int year;
 };
 
+int main(){
+
 Car car1;
 car1.make = "BMW";
 car1.year = 2020;
+
+return 0;
+
+}
 ```
 ## Access Specifiers
 In C++, when you create a class, you have something called access specifiers. These are basically telling C++ if you can access that certain type of information outside of that specified class. This is important to keep certain information secure, access modifiers make software less error prone.
@@ -106,6 +112,9 @@ Car car1;
 car1.make = "BMW";
 car1.year = 2020;
 car1.doors = 4;
+
+return 0;
+
 }
 
 // Virtual Classes
@@ -144,6 +153,9 @@ int main(){
 
 Vehicle* vehicle1 = new Car();
 vehicle1->honk();
+
+return 0;
+
 }
 ```
 ## Pointers:
