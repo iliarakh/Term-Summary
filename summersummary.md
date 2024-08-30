@@ -8,7 +8,7 @@ I then installed Visual Studio tools, CMake, Ninja, and Conan. Visual Studio pro
 
 CMake is a tool that manages the build process of software projects. It generates build files for various platforms and compilers, simplifying the process of compiling and linking code. In my case, CMake helped me link my classes to different main programs. Additionally, I used Ninja as the build system, which takes source code and produces executables.
 
-After initializing my enviroment I was introduced to github, at the beginning I was using gitbash to upload my code and learned the proper commands to upload, push, pull and other nessarcy commands. GitHub is a very useful tool to work on projects with, as you can organize your code, share your code, and organize it in a manner such that your team can edit and show where to make changes and organize a project 
+After initializing my enviroment I was introduced to GitHub, at the beginning I was using gitbash to upload my code and learned the proper commands to upload, push, pull and other necessary commands. GitHub is a very useful tool to work on projects with, as you can organize your code, share your code, and organize it in a manner such that your team can edit and show where to make changes and organize a project. 
 
 ## OOP(Object Oriented Programming)
 
@@ -48,7 +48,7 @@ class Car {
 ```
 
 ## Objects
-With the class "Car" now defined in our example, objects are the individual instances of that class. For example, we defined our class as "Car" with members like "make" and "year." To create an object, you can write Car car1;. This line of code creates an instance of the "Car" class named car1. You can then access and modify its member variables like this: car1.make = "BMW";. This assigns the value "BMW" to the make member of car1.
+With the class "Car" now defined in our example, objects are the individual instances of that class. For example, we defined our class as `"Car"` with members like `"make"` and `"year."` To create an object, you can write `Car car1;`. This line of code creates an instance of the `"Car"` class named `car1`. You can then access and modify its member variables like this: `car1.make = "BMW";`. This assigns the value `"BMW"` to the make member of `car1`.
 
 Objects are like houses built from a blueprint. The class is the blueprint, and each object is a distinct house with its own characteristics. You can create as many objects as you need, each with its own unique set of values.
 
@@ -77,8 +77,9 @@ class Car {
 ## Encapsulation
 In OOP, there is something called encapsulation. This is basically where you manipulate private and public access specifiers to have better control of your data. Let's say you run a company and you create a class called employee. You can set the salary to private and create specific public functions to get and display the salary. This better controls your data, because you (or others) can change one part of the code without affecting other parts.
 
-// Encapsulation
+
 ```cpp
+// Encapsulation
 class Employee {
     private:
         double salary;
@@ -130,7 +131,8 @@ car1.doors = 4;
 return 0;
 
 }
-
+```
+```cpp
 // Virtual Classes
 #ifndef __INHERITANCE__GYM__HPP__
 #define __INHERITANCE__GYM__HPP__
@@ -187,11 +189,11 @@ int main() {
     makeAnimalSpeak(&cat);  
 }
 ```
-In this example, even though makeAnimalSpeak takes a pointer to the base class Animal, it correctly calls the speak() method of the derived classes Dog and Cat, thanks to polymorphism. This ability to interchange derived classes seamlessly wherever a base class is expected makes your code more flexible, easier to maintain, and more adaptable to change.
+In this example, even though makeAnimalSpeak takes a pointer to the base class Animal, it correctly calls the `speak()` method of the derived classes Dog and Cat, thanks to polymorphism. This ability to interchange derived classes seamlessly wherever a base class is expected makes your code more flexible, easier to maintain, and more adaptable to change.
 
 ## Pointers
 
-Pointers are as simple as they sound: they are variables that point to a memory address. Pointers are extremely useful and powerful because they allow you to access a variable or function without actually calling it. You can access the value stored at the memory address a pointer is pointing to by a process called dereferencing. This allows you to access the actual value stored at the pointed-to memory address.
+Pointers are as simple as they sound: they are a memory address. Pointers are extremely useful and powerful because they allow you to access a variable or function without actually calling it. You can access the value stored at the memory address a pointer is pointing to by a process called dereferencing. This allows you to access the actual value stored at the pointed-to memory address.
 ```cpp
 #include <iostream>
 
@@ -218,7 +220,7 @@ Linked lists are closely tied to pointers and utilize their benefits. This is ev
 
 ## Doubly Linked List
 
-A doubly linked list is an extension of the linked list that enhances its functionality by adding an additional pointer. In a singly linked list, each node contains a pointer to the next node, but in a doubly linked list, each node contains two pointers: one pointing to the next node and another pointing to the previous node. This dual-link structure allows for more flexible traversal of the list, as you can move both forwards and backwards. Additionally, I was able to implement a "delete from back" function that removes nodes from the end of the list, made possible by a tail pointer.![doubly list example](DLL1.png)
+A doubly linked list is an extension of the linked list that enhances its functionality by adding an additional pointer. In a singly linked list, each node contains a pointer to the next node, but in a doubly linked list, each node contains two pointers: one pointing to the next node and another pointing to the previous node. This dual-link structure allows for more flexible traversal of the list, as you can move both forwards and backwards. Additionally, I was able to implement a "delete from back" function that removes nodes from the end of the list, made possible by a tail pointer. ![doubly list example](DLL1.png)
 
 ## Jaged Arrays
 During the term, I also learned about jagged arrays and how to handle them in C++. A jagged array is an array of arrays where the inner arrays can have different lengths. This structure is useful when dealing with data that naturally varies in size, such as rows of data with varying numbers of elements.
