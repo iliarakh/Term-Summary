@@ -192,6 +192,25 @@ In this example, even though makeAnimalSpeak takes a pointer to the base class A
 ## Pointers
 
 Pointers are as simple as they sound: they are variables that point to a memory address. Pointers are extremely useful and powerful because they allow you to access a variable or function without actually calling it. You can access the value stored at the memory address a pointer is pointing to by a process called dereferencing. This allows you to access the actual value stored at the pointed-to memory address.
+```cpp
+#include <iostream>
+
+int main() {
+    int num = 42;       // Declare an integer variable
+    int* ptr = &num;    // Declare a pointer and assign it the address of 'num'
+
+    std::cout << "value of num: " << num << std::endl;
+    std::cout << "address of num: " << &num << std::endl;
+    std::cout << "value of ptr (address of num): " << ptr << std::endl;
+    std::cout << "aalue at the address pointed to by ptr: " << *ptr << std::endl;
+
+    *ptr = 100; // Change the value at the address pointed to by 'ptr'
+
+    std::cout << "new value of num: " << num << std::endl;
+
+    return 0;
+}
+```
 
 ## Linked Lists
 
@@ -214,11 +233,80 @@ Multithreading lets you tap into the power of multiple CPU threads, which can re
 By breaking a program into smaller, concurrent threads, you can make better use of modern multi-core processors, where each core can handle its own thread. This can lead to faster performance, especially for tasks that are heavy on computation or need to handle multiple operations at once, like processing real-time data or performing complex calculations.
 
 Additionally, multithreading can make your applications more responsive by keeping the user interface interactive while background tasks are running. However, it does come with its own set of challenges, like managing thread synchronization to avoid issues such as race conditions and deadlocks. So while multithreading can be incredibly powerful, it requires careful handling to get the best results.
+```cpp
+#include <iostream>
+#include <thread>
+
+// function to be run on a separate thread
+void printNumbers(int start, int end) {
+    for (int i = start; i <= end; ++i) {
+        std::cout << i << " ";
+    }
+    std::cout << std::endl;
+}
+
+int main() {
+    // create a thread to run the printNumbers function
+    std::thread t1(printNumbers, 1, 10);
+
+    // main thread prints "Hello, World!"
+    std::cout << "Hello, World!" << std::endl;
+
+    // wait for the thread to finish execution
+    t1.join();
+
+    return 0;
+}
+```
 
 ## Mutexes
 When threads access and modify shared variables, you encounter what's known as a critical section. A critical section is a moment when a shared variable is being modified by multiple threads, which can lead to conflicts and potential crashes if not managed properly. This is where mutexes (short for “mutual exclusions”) come into play. Mutexes are tools used to ensure that only one thread can access a critical section at a time, maintaining atomicity—meaning an action either happens completely or not at all.
 
 Mutexes help you modify critical sections without interference from other threads, which is essential for preventing issues like race conditions and ensuring data consistency. While they add complexity to your code, they are crucial for applications where atomic processes and thread safety are essential for reliable and stable performance.
+```cpp
+#include <cstdlib>
+#include <iostream>
+#include <mutex>
+#include <thread>
+
+int val = 0;
+std::mutex mtx;
+
+void print_if_odd()
+{
+    while (true) {
+        mtx.lock();
+        if (val % 2 == 1) {  // if val is odd
+            std::cout << "VAL IS ODD: ";
+            std::cout << "VAL = " << val << "\n";
+            val++;
+        }
+        mtx.unlock();
+    }
+}
+
+void print_if_even()
+{
+    while (true) {
+        mtx.lock();
+        if (val % 2 == 0) {
+            std::cout << "VAL IS EVEN: ";
+            std::cout << "VAL = " << val << "\n";
+            val++;
+        }
+        mtx.unlock();
+    }
+}
+
+int main()
+{
+    std::thread evenThread(print_if_even);
+    std::thread oddThread(print_if_odd);
+
+    evenThread.join();
+    oddThread.join();
+}
+```
 
 
 ## TCP Client and Server
